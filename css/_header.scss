@@ -1,0 +1,174 @@
+//
+// ヘッダーのスタイル
+//
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  width: 100%;
+  height: 5rem;
+  padding: 0 0 0 2rem;
+  background-color: rgba($black2, $alpha: 0.7);;
+  box-sizing: border-box;
+}
+
+// ハンバーガーメニューボタン
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  color: $yellow;
+  cursor: pointer;
+}
+
+// SPナビゲーション
+.sp-nav {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  padding: 4rem;
+  padding: 4rem;
+  font-size: 4rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $yellow;
+  text-align: center;
+  background-color: rgba($black2, $alpha: 0.9);
+  box-sizing: border-box;
+}
+.sp-nav-list {
+  padding: 12rem 0 0;
+  margin: 0;
+  list-style: none;
+  li {
+      margin-bottom: 4rem;
+      a {  
+        color: $yellow;
+        text-decoration: none;
+      }
+  }
+}
+.sp-nav-shopinfo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.6rem 2rem;
+  color: $white;
+  box-sizing: border-box;
+}
+.shopinfo-info {
+  width: 66.66666%;
+  padding: 1.4rem 1rem;
+  margin: 0 auto 1.6rem;
+  font-size: 1.4rem;
+  border-top: 1px solid #ebd47a;
+  border-bottom: 1px solid #ebd47a;
+  @media (min-width: 769px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      margin-bottom: 4rem;
+  }
+  dl {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 1.4rem;
+      @media (min-width: 769px) {
+          margin-bottom: 0;
+      }
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+  dt,
+  dd {
+      margin-bottom: 0;
+  }
+}
+
+.shopinfo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: 769px) {
+      flex-direction: column;
+  }
+}
+
+.shopinfo-address {
+  font-size: 1.2rem;
+  font-style: normal;
+  @media (min-width: 769px) {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+  }
+}
+
+.shopinfo-zip {
+  display: block;
+  @media (min-width: 769px) {
+      display: inline;
+      margin-right: 1.4rem;
+  }
+}
+
+.shopinfo-sns {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  list-style: none;
+  @media (min-width: 769px) {
+      font-size: 2rem;
+  }
+  li {
+      margin-left: 1.2rem;
+      border-radius: 50%;
+      @media (min-width: 769px) {
+          margin-bottom: 0;
+      }
+      &:first-child {
+          margin-left: 0;
+      }
+  }
+  a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      @media (min-width: 769px) {
+          width: 3.6rem;
+          height: 3.6rem;
+      }
+  }
+  &.white {
+      li {
+          background-color: $white;
+      }
+      a {
+          color: $yellow;
+      }
+  }
+  &.gold {
+      li {
+          background-color: $yellow;
+      }
+      a {
+          color: $white;
+      }
+  }
+}
+
